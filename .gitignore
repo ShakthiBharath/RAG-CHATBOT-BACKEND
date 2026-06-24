@@ -1,0 +1,26 @@
+#BACKEND
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+antenv/
+
+# Environment variables
+.env
+*.env
+
+# Vector DB (Chroma)
+chroma_db/
+*.sqlite
+
+# Uploads
+uploads/
+
+# Logs
+*.log
+
+
+
