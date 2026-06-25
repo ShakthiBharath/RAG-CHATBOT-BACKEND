@@ -5,6 +5,17 @@ from sqlalchemy import create_engine, text
 from google import genai
 from google.genai import types
 from pypdf import PdfReader
+import sys
+import sqlite3
+
+print("Local SQLite:", sqlite3.sqlite_version)
+
+try:
+    if sys.platform.startswith("linux"):
+        __import__("pysqlite3")
+        sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+except ModuleNotFoundError:
+    pass
 import chromadb
 from pydantic import BaseModel, EmailStr
 from langchain_text_splitters import RecursiveCharacterTextSplitter

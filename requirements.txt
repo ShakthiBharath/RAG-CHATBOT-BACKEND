@@ -8,7 +8,7 @@ sqlalchemy
 google-genai
 
 pypdf
-
+pysqlite3-binary
 chromadb
 pydantic[email]
 psycopg2
